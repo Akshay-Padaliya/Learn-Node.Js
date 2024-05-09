@@ -42,13 +42,15 @@
 const employeeSal = require("./employee");
 
 
-employeeSal(20000,(err,obj)=>{
+employeeSal(15000,(err,bonus)=>{
     if(err){
         console.log("Error:",err);
     }else{
-        console.log("Youre Bouns is "+ obj.per , ":" , obj.bonus());
+        console.log("Youre Bouns is ", bonus );
     }
 })
+
+
 
 
 
