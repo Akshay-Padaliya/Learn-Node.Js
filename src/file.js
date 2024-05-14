@@ -70,13 +70,13 @@ const fs = require('fs');
 // })
 //file read
 
-// fs.readFile("./src/assets/data/demo.txt" , (err,data)=>{
-//     if(err){
-//         console.log(err);
-//         return;
-//     }
-//     console.log(data.toString());
-// })
+fs.readFile("./src/assets/data/demo.txt","utf-8" , (err,data)=>{
+    if(err){
+        console.log(err);
+        return;
+    }
+    console.log(data.toString());
+})
 
 //Append Data (add Data)
 

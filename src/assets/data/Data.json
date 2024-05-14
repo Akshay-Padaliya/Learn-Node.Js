@@ -1,0 +1,27 @@
+[
+    {
+        "id": 101,
+        "name": "ABC Institute",
+        "seat": 150
+    },
+    {
+        "id": 103,
+        "name": "xyz Institute",
+        "seat": 200
+    },
+    {
+        "id": 104,
+        "name": "pqr Institute",
+        "seat": 250
+    },
+    {
+        "id": 105,
+        "name": "pqr1 Institute",
+        "seat": 250
+    },
+    {
+        "id": 102,
+        "name": "PQZZ Institute",
+        "seat": 150
+    }
+]

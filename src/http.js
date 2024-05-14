@@ -23,25 +23,35 @@
  
 
 const http = require("http");
-
 const fs = require("fs")
-
-
 const url = require("url");
-const result = fs.readFileSync("./src/TextCopy.txt", "utf-8")
 
-console.log(result);
+// console.log(result);
 
 
 const server = http.createServer((req, res) => {
     console.log(req.method);
 
+    const method = req.method.toLowerCase()
+    const path = req.url
+
+    console.log(method, path);
+
    
-    // if(req.method === "GET"){
+    if(method === "get" && path === "/institute"){
+        console.log("dvgdg");
         res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.write("sdsdvf");
+
+        fs.readFile("./src/assets/data/demo.txt","utf-8" , (err,data)=>{
+            if(err){
+                console.log(err);
+                return;
+            }
+            res.write(data);
+        })
+       
         res.end();
-    // }
+    }
     // console.log(req.url);
     // console.log(req.headers);
     // console.log(url.parse(req.url));
