@@ -1,3 +1,16 @@
+const express = require("express");
+const app = express();
+
+const index = require("./route/v1/index")
+
+app.use("/api/v1", index );
+
+app.listen(3000, () => {
+    console.log("Server is running on port 3000");
+});
+
+
+
 // console.log("hello ok");
 
 // const rectangle = require("./rectangle");
@@ -39,16 +52,16 @@
 // })
 
 
-const employeeSal = require("./employee");
+// const employeeSal = require("./employee");
 
 
-employeeSal(15000,(err,bonus)=>{
-    if(err){
-        console.log("Error:",err);
-    }else{
-        console.log("Youre Bouns is ", bonus );
-    }
-})
+// employeeSal(15000,(err,bonus)=>{
+//     if(err){
+//         console.log("Error:",err);
+//     }else{
+//         console.log("Youre Bouns is ", bonus );
+//     }
+// })
 
 
 

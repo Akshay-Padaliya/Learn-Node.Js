@@ -2,10 +2,13 @@ const express = require("express");
 const fs = require("fs");
 
 const app = express();
-const PORT = 3000;
 const datapath = "./src/assets/data/Data.json";
 
 app.use(express.json());
+
+app.listen(3000, () => {
+    console.log("Server is running on port 3000");
+});
 
 app.get("/institute", (req, res) => {
     fs.readFile(datapath, "utf-8", (err, data) => {
@@ -27,3 +30,16 @@ app.get("/institute", (req, res) => {
         }
     });
 });
+
+app.post("/institute", (req, res) => {
+    
+});
+
+app.delete("/institute", (req, res) => {
+    
+});
+app.put("/institute", (req, res) => {
+    
+});
+
+
